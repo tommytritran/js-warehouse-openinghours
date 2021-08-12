@@ -1,1 +1,1 @@
-Warehouse-openinghours
+Warehouse-openinghours.
