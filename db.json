@@ -1,0 +1,152 @@
+{
+    "periods": [
+        {
+            "id" : 0, 
+            "warehouseId" : 0,
+            "priority": 1,
+            "openingHours": [
+                {
+                "weekday": "Monday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Tuesday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Wednesday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Thursday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Friday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Saturday",
+                "closingHour": "12:00",
+                "openingHour": "07:00"
+                }
+            ]
+        },
+        {
+            "id" : 1, 
+            "warehouseId" : 0,
+            "priority": 2,
+            "openingHours": [
+                {
+                "weekday": "Monday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Tuesday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Wednesday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Thursday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Friday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Saturday",
+                "closingHour": "12:00",
+                "openingHour": "07:00"
+                }
+            ]
+        },
+        {
+            "id" : 2, 
+            "warehouseId" : 1,
+            "priority": 1,
+            "openingHours": [
+                {
+                "weekday": "Monday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Tuesday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Wednesday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Thursday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Friday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Saturday",
+                "closingHour": "12:00",
+                "openingHour": "07:00"
+                }
+            ]
+        },
+        {
+            "id" : 3, 
+            "warehouseId" : 1,
+            "priority": 2,
+            "openingHours": [
+                {
+                "weekday": "Monday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Tuesday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Wednesday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Thursday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Friday",
+                "closingHour": "16:00",
+                "openingHour": "08:00"
+                },
+                {
+                "weekday": "Saturday",
+                "closingHour": "12:00",
+                "openingHour": "07:00"
+                }
+            ]
+        }
+    ]
+}
