@@ -2,8 +2,11 @@
     "periods": [
         {
             "id" : 0, 
+            "name": "Kalbakken",
             "warehouseId" : 0,
             "priority": 1,
+            "from": "2021-08-01",
+            "to": "2022-01-01",
             "openingHours": [
                 {
                 "weekday": "Monday",
@@ -40,7 +43,10 @@
         {
             "id" : 1, 
             "warehouseId" : 0,
+            "name": "Kalbakken",
             "priority": 2,
+            "from": "2021-08-01",
+            "to": "2022-01-01",
             "openingHours": [
                 {
                 "weekday": "Monday",
@@ -77,7 +83,10 @@
         {
             "id" : 2, 
             "warehouseId" : 1,
+            "name": "Lakkegata",
             "priority": 1,
+            "from": "2021-08-01",
+            "to": "2022-01-01",
             "openingHours": [
                 {
                 "weekday": "Monday",
@@ -114,7 +123,10 @@
         {
             "id" : 3, 
             "warehouseId" : 1,
+            "name": "Lakkegata",
             "priority": 2,
+            "from": "2021-08-01",
+            "to": "2022-01-01",
             "openingHours": [
                 {
                 "weekday": "Monday",
