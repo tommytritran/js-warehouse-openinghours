@@ -1,18 +1,8 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react';
-import getAllPeriods from '../../service/PeriodService';
+import React from 'react';
 import PeriodListItem from './PeriodListItem';
 
-export default function PeriodList() {
-  const [periods, setPeriods] = useState([]);
-
-  // Fetch period on load
-  useEffect(() => {
-    (async () => {
-      const data = await getAllPeriods();
-      setPeriods(data);
-    })();
-  }, []);
+export default function PeriodList({ periods }) {
   return (
     <div className="flex flex-col">
       <div className="overflow-x-auto ">
