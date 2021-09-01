@@ -1,164 +1,264 @@
 {
-    "periods": [
+  "period": [
+    {
+      "id": 2,
+      "warehouseId": 1,
+      "warehouse": "Lakkegata",
+      "priority": 1,
+      "from": "2021-08-01",
+      "to": "2022-01-01",
+      "openingHours": [
         {
-            "id" : 0, 
-            "name": "Kalbakken",
-            "warehouseId" : 0,
-            "priority": 1,
-            "from": "2021-08-01",
-            "to": "2022-01-01",
-            "openingHours": [
-                {
-                "weekday": "Monday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Tuesday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Wednesday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Thursday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Friday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Saturday",
-                "closingHour": "12:00",
-                "openingHour": "07:00"
-                }
-            ]
+          "weekday": "Monday",
+          "closingHour": "16:00",
+          "openingHour": "08:00",
+          "closed": false
         },
         {
-            "id" : 1, 
-            "warehouseId" : 0,
-            "name": "Kalbakken",
-            "priority": 2,
-            "from": "2021-08-01",
-            "to": "2022-01-01",
-            "openingHours": [
-                {
-                "weekday": "Monday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Tuesday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Wednesday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Thursday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Friday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Saturday",
-                "closingHour": "12:00",
-                "openingHour": "07:00"
-                }
-            ]
+          "weekday": "Tuesday",
+          "closingHour": "16:00",
+          "openingHour": "08:00",
+          "closed": false
         },
         {
-            "id" : 2, 
-            "warehouseId" : 1,
-            "name": "Lakkegata",
-            "priority": 1,
-            "from": "2021-08-01",
-            "to": "2022-01-01",
-            "openingHours": [
-                {
-                "weekday": "Monday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Tuesday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Wednesday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Thursday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Friday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Saturday",
-                "closingHour": "12:00",
-                "openingHour": "07:00"
-                }
-            ]
+          "weekday": "Wednesday",
+          "closingHour": "16:00",
+          "openingHour": "08:00",
+          "closed": false
         },
         {
-            "id" : 3, 
-            "warehouseId" : 1,
-            "name": "Lakkegata",
-            "priority": 2,
-            "from": "2021-08-01",
-            "to": "2022-01-01",
-            "openingHours": [
-                {
-                "weekday": "Monday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Tuesday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Wednesday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Thursday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Friday",
-                "closingHour": "16:00",
-                "openingHour": "08:00"
-                },
-                {
-                "weekday": "Saturday",
-                "closingHour": "12:00",
-                "openingHour": "07:00"
-                }
-            ]
+          "weekday": "Thursday",
+          "closingHour": "16:00",
+          "openingHour": "08:00",
+          "closed": false
+        },
+        {
+          "weekday": "Friday",
+          "closingHour": "16:00",
+          "openingHour": "08:00",
+          "closed": false
+        },
+        {
+          "weekday": "Saturday",
+          "closingHour": "12:00",
+          "openingHour": "07:00",
+          "closed": false
         }
-    ]
+      ]
+    },
+    {
+      "warehouse": "Bodø",
+      "from": "2021-09-01",
+      "to": "2023-09-01",
+      "priority": 2,
+      "openingHours": [
+        {
+          "weekday": "Monday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Tuesday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Wednsday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Thursday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Friday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Saturday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        }
+      ],
+      "warehouseId": 5,
+      "id": 5
+    },
+    {
+      "warehouse": "Kalbakken",
+      "from": "2021-09-01",
+      "to": "2022-09-01",
+      "priority": 1,
+      "openingHours": [
+        {
+          "weekday": "Monday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Tuesday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Wednsday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Thursday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Friday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Saturday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        }
+      ],
+      "warehouseId": 0,
+      "id": 6
+    },
+    {
+      "warehouse": "Kalbakken",
+      "from": "2021-09-01",
+      "to": "2021-10-01",
+      "priority": 1,
+      "openingHours": [
+        {
+          "weekday": "Monday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Tuesday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Wednsday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Thursday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Friday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Saturday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        }
+      ],
+      "warehouseId": 0,
+      "id": 7
+    },
+    {
+      "warehouse": "Bergen",
+      "from": "2021-09-01",
+      "to": "2021-10-01",
+      "priority": 4,
+      "openingHours": [
+        {
+          "weekday": "Monday",
+          "openingHour": "13:53",
+          "closingHour": "14:50",
+          "closed": false
+        },
+        {
+          "weekday": "Tuesday",
+          "openingHour": "",
+          "closingHour": "13:55",
+          "closed": true
+        },
+        {
+          "weekday": "Wednsday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Thursday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Friday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Saturday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        }
+      ],
+      "warehouseId": 4,
+      "id": 8
+    }
+  ],
+  "warehouse": [
+    {
+      "id": 0,
+      "warehouse": "Kalbakken"
+    },
+    {
+      "id": 1,
+      "warehouse": "Lakkegata"
+    },
+    {
+      "id": 3,
+      "warehouse": "Oslo"
+    },
+    {
+      "id": 4,
+      "warehouse": "Bergen"
+    },
+    {
+      "id": 5,
+      "warehouse": "Bodø"
+    },
+    {
+      "id": 6,
+      "warehouse": "Trondheim"
+    },
+    {
+      "id": 7,
+      "warehouse": "Ålesund"
+    }
+  ]
 }

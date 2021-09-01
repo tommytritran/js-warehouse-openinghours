@@ -2,9 +2,9 @@
 import React, { useState } from 'react';
 import { format } from 'date-fns';
 import { PencilAltIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline';
-import PeriodEditModal from './PeriodEditModal';
+import PeriodEditModal from './edit/PeriodEditModal';
 
-export default function PeriodListItem({ period, index }) {
+export default function PeriodListItem({ period, refreshPeriodList }) {
   const [toggleEdit, setToggleEdit] = useState(false);
   const [showPeriod, setShowPeriod] = useState(false);
 
@@ -34,12 +34,10 @@ export default function PeriodListItem({ period, index }) {
   }
 
   function renderPeriod(opening) {
-    const closed = opening.openingHour === 'closed';
     return (
-      <div className="flex items-baseline">
+      <div className="flex items-baseline" key={`period-${opening.weekday}`}>
         <div className="w-32">{opening.weekday}</div>
-
-        {closed
+        {opening.closed
           ? <p className="text-red-700 text-center">Stengt</p>
           : (
             <div className="flex space-x-2">
@@ -54,9 +52,15 @@ export default function PeriodListItem({ period, index }) {
   const PeriodDate = `${format(new Date(period.from), 'yyyy.MM.dd')} - ${format(new Date(period.to), 'yyyy.MM.dd')}`;
   return (
     <>
-      {toggleEdit && <PeriodEditModal period={period} toggleEdit={togglePeriodEditModal} />}
-      <tr key={index} className="default-text-color hover:bg-gray-100">
-        <td className="px-6 py-4 whitespace-nowrap text-sm default-text-color">{period.name}</td>
+      {toggleEdit && (
+      <PeriodEditModal
+        period={period}
+        toggleEdit={togglePeriodEditModal}
+        refreshPeriodList={refreshPeriodList}
+      />
+      )}
+      <tr className="default-text-color hover:bg-gray-100">
+        <td className="px-6 py-4 whitespace-nowrap text-sm default-text-color">{period.warehouse}</td>
         <td className="px-6 py-4 whitespace-nowrap text-sm">
           <button type="button" className={`flex space-x-2 ${showPeriod && 'font-bold pb-2'}`} onClick={() => togglePeriod()}>
             <div>{PeriodDate}</div>
