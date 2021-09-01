@@ -52,7 +52,7 @@ export default function PeriodEdit({ period, handler }) {
     });
   }
   return (
-    <div className="default-text-color">
+    <div className="text-color-default">
       <div className="py-4">
         <DateRangePicker
           from={period.from}

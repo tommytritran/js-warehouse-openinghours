@@ -59,7 +59,7 @@ export default function PeriodAdd({ warehouses, handler }) {
   }
 
   return (
-    <div className="default-text-color">
+    <div className="text-color-default">
       <div className="grid grid-flow-row xs:grid-cols-1 sm:grid-cols-2 gap-4  py-4 border-b-2">
         <Dropdown
           data={warehouses.map((w) => ({ id: w.id, name: w.warehouse }))}
