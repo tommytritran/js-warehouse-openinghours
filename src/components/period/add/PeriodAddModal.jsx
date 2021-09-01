@@ -1,11 +1,30 @@
-import React, { Fragment, useRef } from 'react';
+/* eslint-disable no-unused-vars */
+import React, { Fragment, useRef, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { PencilAltIcon } from '@heroicons/react/outline';
-import PeriodEdit from './PeriodEdit';
+import { PlusCircleIcon, XCircleIcon } from '@heroicons/react/outline';
+import PeriodAdd from './PeriodAdd';
+import { addPeriod } from '../../../service/PeriodService';
+import { validatePeriod } from '../../../Util/Validation/FormValidation';
 
-export default function PeriodEditModal({ period, toggleEdit }) {
+export default function PeriodAddModal({ togglePeriodAdd, warehouses, refreshPeriodList }) {
   const cancelButtonRef = useRef(null);
+  const [period, setPeriod] = useState({});
 
+  function addHandler() {
+    const errors = validatePeriod(period);
+    if (errors.length > 0) {
+      // todo display error
+      console.log(errors);
+    } else {
+      togglePeriodAdd(false);
+      addPeriod(period);
+      refreshPeriodList();
+    }
+  }
+
+  function periodAddHandler(data) {
+    setPeriod(data);
+  }
   return (
     <Transition.Root show as={Fragment}>
       <Dialog
@@ -13,7 +32,7 @@ export default function PeriodEditModal({ period, toggleEdit }) {
         auto-reopen="true"
         className="fixed z-10 inset-0 overflow-y-auto"
         initialFocus={cancelButtonRef}
-        onClose={toggleEdit}
+        onClose={togglePeriodAdd}
       >
         <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
           <Transition.Child
@@ -45,17 +64,16 @@ export default function PeriodEditModal({ period, toggleEdit }) {
               <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="sm:flex sm:items-start">
                   <div className="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 sm:mx-0 sm:h-10 sm:w-10">
-                    <PencilAltIcon className="h-6 w-6 text-indigo-600" aria-hidden="true" />
+                    <PlusCircleIcon className="h-6 w-6 text-indigo-600" aria-hidden="true" />
                   </div>
                   <div className="mt-3 sm:mt-0 sm:ml-4 ">
                     <Dialog.Title as="h3" className="text-lg leading-6 font-medium text-gray-900">
-                      Edit
-                      {period.name}
+                      Add new period
                     </Dialog.Title>
                     <div className="mt-2">
-                      <PeriodEdit
-                        ref={cancelButtonRef}
-                        period={period}
+                      <PeriodAdd
+                        warehouses={warehouses}
+                        handler={periodAddHandler}
                       />
                     </div>
                   </div>
@@ -65,15 +83,17 @@ export default function PeriodEditModal({ period, toggleEdit }) {
                 <button
                   type="button"
                   className="default-accept-btn"
-                  onClick={() => toggleEdit(false)}
+                  onClick={() => addHandler()}
                 >
-                  save
+                  <PlusCircleIcon className="w-4 h-4 mr-2" />
+                  Add
                 </button>
                 <button
                   type="button"
                   className="default-cancel-btn"
-                  onClick={() => toggleEdit(false)}
+                  onClick={() => togglePeriodAdd(false)}
                 >
+                  <XCircleIcon className="w-4 h-4 mr-2" />
                   Cancel
                 </button>
               </div>
