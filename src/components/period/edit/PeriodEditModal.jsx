@@ -78,7 +78,7 @@ export default function PeriodEditModal({
                       </h3>
                       <button
                         type="button"
-                        className="default-delete-btn xs:mt-2 sm:mt-0"
+                        className="btn-delete xs:mt-2 sm:mt-0"
                         onClick={() => deletePeriodHandler()}
                       >
                         <TrashIcon className="h-4 w-4 mr-2" />
@@ -97,7 +97,7 @@ export default function PeriodEditModal({
               <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                 <button
                   type="button"
-                  className="default-accept-btn"
+                  className="btn-accept"
                   onClick={() => saveEdit()}
                 >
                   <PencilAltIcon className="w-4 h-4 mr-2" />
@@ -105,7 +105,7 @@ export default function PeriodEditModal({
                 </button>
                 <button
                   type="button"
-                  className="default-cancel-btn"
+                  className="btn-cancel"
                   onClick={() => toggleEdit(false)}
                 >
                   <XCircleIcon className="h-4 w-4 mr-2" />

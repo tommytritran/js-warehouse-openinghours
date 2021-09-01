@@ -59,8 +59,8 @@ export default function PeriodListItem({ period, refreshPeriodList }) {
         refreshPeriodList={refreshPeriodList}
       />
       )}
-      <tr className="default-text-color hover:bg-gray-100">
-        <td className="px-6 py-4 whitespace-nowrap text-sm default-text-color">{period.warehouse}</td>
+      <tr className="text-color-default hover:bg-gray-100">
+        <td className="px-6 py-4 whitespace-nowrap text-sm text-color-default">{period.warehouse}</td>
         <td className="px-6 py-4 whitespace-nowrap text-sm">
           <button type="button" className={`flex space-x-2 ${showPeriod && 'font-bold pb-2'}`} onClick={() => togglePeriod()}>
             <div>{PeriodDate}</div>

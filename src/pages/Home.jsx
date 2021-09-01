@@ -31,15 +31,13 @@ export default function Home() {
   }
 
   function refreshPeriodList() {
-    console.log('refreshPeriodList');
-
     (async () => {
       setPeriods(await getAllPeriods());
     })();
   }
   return (
-    <div className="sm:px-6 lg:px-8 pt-4 h-screen bg-gray-100">
-      <div className="flex xs:justify-center md:justify-start">
+    <div>
+      <div className="flex xs:justify-between md:justify-start">
         <Dropdown
           data={warehouses.map((w) => ({ id: w.id, name: w.warehouse }))}
           handler={locationSelector}
@@ -47,7 +45,7 @@ export default function Home() {
         />
         <button
           type="button"
-          className="xs:ml-4 default-btn"
+          className="xs:ml-4 btn"
           onClick={() => togglePeriodAdd()}
         >
           <PlusCircleIcon className="h-4 w-4 mr-2" />

@@ -82,7 +82,7 @@ export default function PeriodAddModal({ togglePeriodAdd, warehouses, refreshPer
               <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                 <button
                   type="button"
-                  className="default-accept-btn"
+                  className="btn-accept"
                   onClick={() => addHandler()}
                 >
                   <PlusCircleIcon className="w-4 h-4 mr-2" />
@@ -90,7 +90,7 @@ export default function PeriodAddModal({ togglePeriodAdd, warehouses, refreshPer
                 </button>
                 <button
                   type="button"
-                  className="default-cancel-btn"
+                  className="btn-cancel"
                   onClick={() => togglePeriodAdd(false)}
                 >
                   <XCircleIcon className="w-4 h-4 mr-2" />
