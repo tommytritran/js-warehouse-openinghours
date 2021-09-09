@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
-import DayPicker from '../../layout/DayPicker';
 import Dropdown from '../../layout/Dropdown';
 import DateRangePicker from '../../layout/DateRangePicker';
+import Inputfield from '../../layout/Inputfield';
+import DayTimePicker from '../../layout/DayTimePicker';
 
-export default function PeriodEdit({ period, handler }) {
+export default function PeriodEdit({ period, handler, initialFocusRef }) {
   const [priorityPlaceholder, setPriorityPlaceholder] = useState(period.priority || 1);
   const [editedPeriod, setEditedPeriod] = useState(period);
-
   useEffect(() => {
     handler(editedPeriod);
   }, [editedPeriod]);
@@ -24,35 +24,22 @@ export default function PeriodEdit({ period, handler }) {
     setEditedPeriod({ ...period, to: date });
   }
 
-  function closingHourHandler(weekday, closingHour) {
-    setEditedPeriod({
-      ...period,
-      openingHours: period.openingHours.map(
-        (oh) => (oh.weekday === weekday ? { ...oh, closingHour } : oh),
-      ),
-    });
+  function titleHandler(e) {
+    setEditedPeriod({ ...period, title: e.target.value });
   }
-  function openingHourHandler(weekday, openingHour) {
-    setEditedPeriod({
-      ...period,
-      openingHours: period.openingHours.map(
-        (oh) => (oh.weekday === weekday ? { ...oh, openingHour } : oh),
-      ),
-    });
-  }
-
-  function closedHandler(weekday, closed) {
-    setEditedPeriod({
-      ...period,
-      openingHours: period.openingHours.map(
-        (oh) => (
-          oh.weekday === weekday ? { ...oh, closed } : oh
-        ),
-      ),
-    });
+  function OpeningHourHandler(openingHours) {
+    setEditedPeriod({ ...period, openingHours });
   }
   return (
     <div className="text-color-default">
+      <div className="">
+        <Inputfield
+          placeholder="Title"
+          value={period.title}
+          handler={titleHandler}
+          focusRef={initialFocusRef}
+        />
+      </div>
       <div className="py-4">
         <DateRangePicker
           from={period.from}
@@ -61,7 +48,7 @@ export default function PeriodEdit({ period, handler }) {
           toHandler={dateRangeToHandler}
         />
       </div>
-      <div className="flex py-4 border-t-2 border-b-2">
+      <div className="flex items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500  w-full border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 rounded-md">
         <div>
           Priority:
         </div>
@@ -79,15 +66,12 @@ export default function PeriodEdit({ period, handler }) {
           <div>to</div>
           <div>Closed</div>
         </div>
-        {period.openingHours.map((opening) => (
-          <DayPicker
-            key={`daypicker-${opening.weekday}`}
-            opening={opening}
-            closingHourHandler={closingHourHandler}
-            openingHourHandler={openingHourHandler}
-            closedHandler={closedHandler}
+        <div>
+          <DayTimePicker
+            data={period.openingHours}
+            handler={OpeningHourHandler}
           />
-        ))}
+        </div>
       </div>
     </div>
   );
