@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.2.0",
+    "@fullcalendar/daygrid": "^5.9.0",
+    "@fullcalendar/react": "^5.9.0",
     "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.3",
     "@testing-library/jest-dom": "^5.11.4",
