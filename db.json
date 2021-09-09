@@ -274,7 +274,8 @@
         }
       ],
       "warehouseId": 6,
-      "id": 9
+      "id": 9,
+      "title": "test"
     },
     {
       "warehouse": "Oslo",
@@ -319,9 +320,56 @@
           "closed": true
         }
       ],
-      "title": "Påske",
+      "title": "veldig lang tittel tekst som ikke passer inn",
       "warehouseId": 3,
       "id": 10
+    },
+    {
+      "warehouse": "Kalbakken",
+      "from": "2021-09-09",
+      "to": "2021-09-11",
+      "priority": 5,
+      "openingHours": [
+        {
+          "weekday": "Monday",
+          "openingHour": "14:10",
+          "closingHour": "15:10",
+          "closed": false
+        },
+        {
+          "weekday": "Tuesday",
+          "openingHour": "15:11",
+          "closingHour": "17:10",
+          "closed": false
+        },
+        {
+          "weekday": "Wednsday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Thursday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Friday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Saturday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        }
+      ],
+      "warehouseId": 0,
+      "title": "Sommer tid1",
+      "id": 11
     }
   ],
   "warehouse": [

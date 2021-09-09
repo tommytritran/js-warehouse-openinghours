@@ -35,7 +35,7 @@ export default function PeriodEdit({ period, handler, initialFocusRef }) {
       <div className="">
         <Inputfield
           placeholder="Title"
-          value={period.title}
+          value={editedPeriod.title}
           handler={titleHandler}
           focusRef={initialFocusRef}
         />

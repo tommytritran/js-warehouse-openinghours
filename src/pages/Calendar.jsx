@@ -11,10 +11,16 @@ export default function Calendar() {
   const [locationPlaceholder, setLocationPlaceholder] = useState('Select warehouse');
   const [events, setEvents] = useState([]);
 
+  function getTitle(period) {
+    if (period.title) {
+      return `${period.title} - ${period.priority}`;
+    }
+    return `${period.warehouse} - ${period.priority}`;
+  }
   function convertPeriodToCalenderEvent(periodList) {
     const eventList = periodList.map((p) => ({
       id: p.id,
-      title: `${p.warehouse} - ${p.priority}`,
+      title: getTitle(p),
       start: p.from,
       end: p.to,
       backgroundColor: getColorByPriority(p.priority),
