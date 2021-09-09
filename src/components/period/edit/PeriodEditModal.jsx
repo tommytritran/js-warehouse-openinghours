@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { PencilAltIcon, TrashIcon, XCircleIcon } from '@heroicons/react/outline';
 import PeriodEdit from './PeriodEdit';
@@ -6,17 +6,17 @@ import { deletePeriod, updatePeriod } from '../../../service/PeriodService';
 import { validatePeriod } from '../../../Util/Validation/FormValidation';
 
 export default function PeriodEditModal({
-  period, toggleEdit, ref, refreshPeriodList,
+  period, toggleEdit, refreshPeriodList,
 }) {
+  const initialFocusRef = useRef(null);
   const [editedPeriod, setEditedPeriod] = useState({});
+
   function saveEdit() {
     const errors = validatePeriod(period);
     if (errors.length > 0) {
       console.log(errors);
       // todo handle errors
     } else {
-      console.log('update period');
-
       toggleEdit(false);
       updatePeriod(editedPeriod);
       refreshPeriodList();
@@ -36,8 +36,8 @@ export default function PeriodEditModal({
         as="div"
         auto-reopen="true"
         className="fixed z-10 inset-0 overflow-y-auto"
-        initialFocus={ref}
         onClose={toggleEdit}
+        initialFocus={initialFocusRef}
       >
         <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
           <Transition.Child
@@ -89,6 +89,7 @@ export default function PeriodEditModal({
                       <PeriodEdit
                         period={period}
                         handler={editPeriodHandler}
+                        initialFocusRef={initialFocusRef}
                       />
                     </div>
                   </div>

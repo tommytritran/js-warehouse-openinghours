@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import _ from 'lodash';
 import Dropdown from '../../layout/Dropdown';
-import DayPicker from '../../layout/DayPicker';
 import DateRangePicker from '../../layout/DateRangePicker';
-import { period as periodModel, days } from '../../../model/Period';
+import { period as periodModel } from '../../../model/Period';
+import Inputfield from '../../layout/Inputfield';
+import DayTimePicker from '../../layout/DayTimePicker';
 
-export default function PeriodAdd({ warehouses, handler }) {
+export default function PeriodAdd({ warehouses, handler, initialFocusRef }) {
   const [warehousePlaceholder, setWarehousePlaceholder] = useState('Choose warehouse');
   const [priorityPlaceholder, setPriorityPlaceholder] = useState('Choose priority');
   const [period, setPeriod] = useState(periodModel);
 
   useEffect(() => {
-    console.log(period);
     handler(period);
   }, [period]);
 
@@ -31,36 +31,24 @@ export default function PeriodAdd({ warehouses, handler }) {
   function dateRangeToHandler(date) {
     setPeriod({ ...period, to: date });
   }
-  function closingHourHandler(weekday, closingHour) {
-    setPeriod({
-      ...period,
-      openingHours: period.openingHours.map(
-        (oh) => (oh.weekday === weekday ? { ...oh, closingHour } : oh),
-      ),
-    });
+
+  function OpeningHourHandler(openingHours) {
+    setPeriod({ ...period, openingHours });
   }
-  function openingHourHandler(weekday, openingHour) {
-    setPeriod({
-      ...period,
-      openingHours: period.openingHours.map(
-        (oh) => (oh.weekday === weekday ? { ...oh, openingHour } : oh),
-      ),
-    });
-  }
-  function closedHandler(weekday, closed) {
-    setPeriod({
-      ...period,
-      openingHours: period.openingHours.map(
-        (oh) => (
-          oh.weekday === weekday ? { ...oh, closed } : oh
-        ),
-      ),
-    });
+  function titelHandler(e) {
+    setPeriod({ ...period, title: e.target.value });
   }
 
   return (
     <div className="text-color-default">
-      <div className="grid grid-flow-row xs:grid-cols-1 sm:grid-cols-2 gap-4  py-4 border-b-2">
+      <div>
+        <Inputfield
+          placeholder="Title"
+          handler={titelHandler}
+          focusRef={initialFocusRef}
+        />
+      </div>
+      <div className="grid grid-flow-row xs:grid-cols-1 sm:grid-cols-2 gap-4">
         <Dropdown
           data={warehouses.map((w) => ({ id: w.id, name: w.warehouse }))}
           placeholder={warehousePlaceholder}
@@ -72,29 +60,16 @@ export default function PeriodAdd({ warehouses, handler }) {
           handler={priorityHandler}
         />
       </div>
-      <div className="py-4 border-b-2">
+      <div>
         <DateRangePicker
           fromHandler={dateRangerFromHandler}
           toHandler={dateRangeToHandler}
         />
       </div>
-      <div className="">
-        <div className="grid grid-cols-4 font-semibold py-2">
-          <div className="col-start-2">From</div>
-          <div>To</div>
-          <div>Closed</div>
-        </div>
-        {
-            days.map((d) => (
-              <DayPicker
-                key={`daypicker-${d.weekday}`}
-                opening={d}
-                closingHourHandler={closingHourHandler}
-                openingHourHandler={openingHourHandler}
-                closedHandler={closedHandler}
-              />
-            ))
-        }
+      <div>
+        <DayTimePicker
+          handler={OpeningHourHandler}
+        />
       </div>
     </div>
   );

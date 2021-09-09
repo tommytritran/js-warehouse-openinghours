@@ -3,18 +3,11 @@ import React, { useState } from 'react';
 import { format } from 'date-fns';
 import { PencilAltIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline';
 import PeriodEditModal from './edit/PeriodEditModal';
+import useToggle from '../../Util/hooks/useToggle';
 
 export default function PeriodListItem({ period, refreshPeriodList }) {
-  const [toggleEdit, setToggleEdit] = useState(false);
   const [showPeriod, setShowPeriod] = useState(false);
-
-  function togglePeriodEditModal(status) {
-    if (status) {
-      setToggleEdit(status);
-    } else {
-      setToggleEdit(!toggleEdit);
-    }
-  }
+  const [toggleEdit, setToggleEdit] = useToggle(false);
 
   function togglePeriod() {
     setShowPeriod(!showPeriod);
@@ -55,7 +48,7 @@ export default function PeriodListItem({ period, refreshPeriodList }) {
       {toggleEdit && (
       <PeriodEditModal
         period={period}
-        toggleEdit={togglePeriodEditModal}
+        toggleEdit={setToggleEdit}
         refreshPeriodList={refreshPeriodList}
       />
       )}
@@ -80,7 +73,7 @@ export default function PeriodListItem({ period, refreshPeriodList }) {
           </span>
         </td>
         <td className=" whitespace-nowrap text-sm text-indigo-600 hover:text-indigo-900">
-          <button type="button" className="flex px-6 py-4" onClick={() => togglePeriodEditModal(true)}>
+          <button type="button" className="flex px-6 py-4" onClick={() => setToggleEdit(true)}>
             <PencilAltIcon className="h-6 w-6 mr-2" />
             Edit
           </button>

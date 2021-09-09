@@ -5,14 +5,14 @@ import Dropdown from '../components/layout/Dropdown';
 import PeriodList from '../components/period/PeriodList';
 import getAllWarehouses from '../service/warehouseService';
 import PeriodAddModal from '../components/period/add/PeriodAddModal';
+import useToggle from '../Util/hooks/useToggle';
 
 export default function Home() {
   const [periods, setPeriods] = useState([]);
   const [warehouses, setWarehouses] = useState([]);
   const [selectedWareHouse, setSelectedWareHouse] = useState(-1);
   const [locationPlaceholder, setLocationPlaceholder] = useState('Show all');
-
-  const [showPeriodAdd, setShowPeriodAdd] = useState(false);
+  const [togglePeriodAdd, setTogglePeriodAdd] = useToggle(false);
 
   useEffect(() => {
     (async () => {
@@ -24,10 +24,6 @@ export default function Home() {
   function locationSelector(id, warehouse) {
     setSelectedWareHouse(id);
     setLocationPlaceholder(warehouse);
-  }
-
-  function togglePeriodAdd() {
-    setShowPeriodAdd(!showPeriodAdd);
   }
 
   function refreshPeriodList() {
@@ -46,16 +42,16 @@ export default function Home() {
         <button
           type="button"
           className="xs:ml-4 btn"
-          onClick={() => togglePeriodAdd()}
+          onClick={() => setTogglePeriodAdd()}
         >
           <PlusCircleIcon className="h-4 w-4 mr-2" />
           Add period
         </button>
       </div>
-      {showPeriodAdd
+      {togglePeriodAdd
       && (
       <PeriodAddModal
-        togglePeriodAdd={togglePeriodAdd}
+        togglePeriodAdd={setTogglePeriodAdd}
         warehouses={warehouses}
         refreshPeriodList={refreshPeriodList}
       />

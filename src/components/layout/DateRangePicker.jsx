@@ -16,16 +16,14 @@ export default function DateRangePicker({
   }
 
   return (
-    <div>
-      <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="flex">
-          <p className="xs:w-14">From: </p>
-          <input type="date" value={fromDate} onChange={fromDateHandler} />
-        </div>
-        <div className="flex flex-shrink-1">
-          <p className="xs:w-14 sm:w-8">To: </p>
-          <input type="date" value={toDate} onChange={toDateHandler} />
-        </div>
+    <div className="grid xs:grid-cols-1 sm:grid-cols-2 gap-4 border rounded-md px-4 py-2 my-2">
+      <div className="flex">
+        <p className="xs:w-14">From: </p>
+        <input type="date" value={fromDate} onChange={fromDateHandler} className="hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500 rounded-md" />
+      </div>
+      <div className="flex flex-shrink-1">
+        <p className="xs:w-14 sm:w-8">To: </p>
+        <input type="date" value={toDate} onChange={toDateHandler} className="hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500 rounded-md" />
       </div>
     </div>
   );

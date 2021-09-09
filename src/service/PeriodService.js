@@ -8,8 +8,6 @@ export async function getAllPeriods() {
 
 export async function addPeriod(period) {
   const { data } = await axios.post(`${baseURL}/period`, period);
-  console.log(`added period: ${data.id}`);
-
   return data;
 }
 
