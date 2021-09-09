@@ -4,7 +4,7 @@
       "id": 2,
       "warehouseId": 1,
       "warehouse": "Lakkegata",
-      "priority": 1,
+      "priority": 3,
       "from": "2021-08-01",
       "to": "2022-01-01",
       "openingHours": [
@@ -142,7 +142,7 @@
       "warehouse": "Kalbakken",
       "from": "2021-09-01",
       "to": "2021-10-01",
-      "priority": 1,
+      "priority": 2,
       "openingHours": [
         {
           "weekday": "Monday",
@@ -229,6 +229,99 @@
       ],
       "warehouseId": 4,
       "id": 8
+    },
+    {
+      "warehouse": "Trondheim",
+      "from": "2021-09-01",
+      "to": "2022-09-01",
+      "priority": 2,
+      "openingHours": [
+        {
+          "weekday": "Monday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Tuesday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Wednsday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Thursday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Friday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Saturday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        }
+      ],
+      "warehouseId": 6,
+      "id": 9
+    },
+    {
+      "warehouse": "Oslo",
+      "from": "2021-09-09",
+      "to": "2021-09-16",
+      "priority": 1,
+      "openingHours": [
+        {
+          "weekday": "Monday",
+          "openingHour": "12:51",
+          "closingHour": "13:52",
+          "closed": false
+        },
+        {
+          "weekday": "Tuesday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Wednsday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Thursday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Friday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Saturday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        }
+      ],
+      "title": "Påske",
+      "warehouseId": 3,
+      "id": 10
     }
   ],
   "warehouse": [
