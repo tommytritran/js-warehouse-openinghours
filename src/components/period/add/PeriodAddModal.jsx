@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { Fragment, useRef, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { PlusCircleIcon, XCircleIcon } from '@heroicons/react/outline';
+import { PlusCircleIcon, XIcon } from '@heroicons/react/outline';
 import PeriodAdd from './PeriodAdd';
 import { addPeriod } from '../../../service/PeriodService';
 import { validatePeriod } from '../../../Util/Validation/FormValidation';
@@ -94,7 +94,7 @@ export default function PeriodAddModal({ togglePeriodAdd, warehouses, refreshPer
                   className="btn-cancel"
                   onClick={() => togglePeriodAdd(false)}
                 >
-                  <XCircleIcon className="w-4 h-4 mr-2" />
+                  <XIcon className="w-4 h-4 mr-2" />
                   Cancel
                 </button>
               </div>

@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useRef } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { PencilAltIcon, TrashIcon, XCircleIcon } from '@heroicons/react/outline';
+import { PencilAltIcon, TrashIcon, XIcon } from '@heroicons/react/outline';
 import PeriodEdit from './PeriodEdit';
 import { deletePeriod, updatePeriod } from '../../../service/PeriodService';
 import { validatePeriod } from '../../../Util/Validation/FormValidation';
@@ -109,7 +109,7 @@ export default function PeriodEditModal({
                   className="btn-cancel"
                   onClick={() => toggleEdit(false)}
                 >
-                  <XCircleIcon className="h-4 w-4 mr-2" />
+                  <XIcon className="h-4 w-4 mr-2" />
                   Cancel
                 </button>
               </div>
