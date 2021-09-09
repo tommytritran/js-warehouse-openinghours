@@ -7,7 +7,7 @@ import { addPeriod } from '../../../service/PeriodService';
 import { validatePeriod } from '../../../Util/Validation/FormValidation';
 
 export default function PeriodAddModal({ togglePeriodAdd, warehouses, refreshPeriodList }) {
-  const cancelButtonRef = useRef(null);
+  const initialFocusRef = useRef(null);
   const [period, setPeriod] = useState({});
 
   function addHandler() {
@@ -31,7 +31,7 @@ export default function PeriodAddModal({ togglePeriodAdd, warehouses, refreshPer
         as="div"
         auto-reopen="true"
         className="fixed z-10 inset-0 overflow-y-auto"
-        initialFocus={cancelButtonRef}
+        initialFocus={initialFocusRef}
         onClose={togglePeriodAdd}
       >
         <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
@@ -74,6 +74,7 @@ export default function PeriodAddModal({ togglePeriodAdd, warehouses, refreshPer
                       <PeriodAdd
                         warehouses={warehouses}
                         handler={periodAddHandler}
+                        initialFocusRef={initialFocusRef}
                       />
                     </div>
                   </div>
