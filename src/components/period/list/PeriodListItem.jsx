@@ -2,8 +2,9 @@
 import React, { useState } from 'react';
 import { format } from 'date-fns';
 import { PencilAltIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline';
-import PeriodEditModal from './edit/PeriodEditModal';
-import useToggle from '../../Util/hooks/useToggle';
+import PeriodEditModal from '../edit/PeriodEditModal';
+import useToggle from '../../../Util/hooks/useToggle';
+import OpeningHours from './OpeningHours';
 
 export default function PeriodListItem({ period, refreshPeriodList }) {
   const [showPeriod, setShowPeriod] = useState(false);
@@ -25,23 +26,8 @@ export default function PeriodListItem({ period, refreshPeriodList }) {
         return 'bg-red-100 text-red-800';
     }
   }
+  console.log(period);
 
-  function renderPeriod(opening) {
-    return (
-      <div className="flex items-baseline" key={`period-${opening.weekday}`}>
-        <div className="w-32">{opening.weekday}</div>
-        {opening.closed
-          ? <p className="text-red-700 text-center">Stengt</p>
-          : (
-            <div className="flex space-x-2">
-              <p>{opening.openingHour}</p>
-              <p>-</p>
-              <p>{opening.closingHour}</p>
-            </div>
-          )}
-      </div>
-    );
-  }
   const PeriodDate = `${format(new Date(period.from), 'yyyy.MM.dd')} - ${format(new Date(period.to), 'yyyy.MM.dd')}`;
   return (
     <>
@@ -61,11 +47,7 @@ export default function PeriodListItem({ period, refreshPeriodList }) {
             <div>{showPeriod ? <ChevronUpIcon className="w-4 h-4 mt-0.5" /> : <ChevronDownIcon className="w-4 h-4 mt-0.5" />}</div>
           </button>
           <div className="flex flex-col">
-            {showPeriod && (
-              period.openingHours.map((opening) => (
-                renderPeriod(opening)
-              ))
-            )}
+            {showPeriod && <OpeningHours openingHourData={period.openingHours} />}
           </div>
         </td>
         <td className="px-6 py-4 whitespace-nowrap text-sm ">

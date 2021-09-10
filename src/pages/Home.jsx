@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { PlusCircleIcon } from '@heroicons/react/outline';
 import { getAllPeriods } from '../service/PeriodService';
 import Dropdown from '../components/layout/Dropdown';
-import PeriodList from '../components/period/PeriodList';
+import PeriodList from '../components/period/list/PeriodList';
 import getAllWarehouses from '../service/warehouseService';
 import PeriodAddModal from '../components/period/add/PeriodAddModal';
 import useToggle from '../Util/hooks/useToggle';
