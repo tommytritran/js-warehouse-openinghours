@@ -38,7 +38,7 @@ export default function DayPicker({
       </div>
       )}
       <div className="grid grid-cols-4">
-        <div>{opening.weekday}</div>
+        <div className="text-sm">{opening.weekday}</div>
         <div><input type="time" value={isClosed ? '' : fromValue} onChange={fromValueHandler} /></div>
         <div><input type="time" value={isClosed ? '' : toValue} onChange={toValueHandler} min={fromValue} /></div>
         <div><input type="checkbox" onChange={closedValueHandler} checked={isClosed} /></div>
