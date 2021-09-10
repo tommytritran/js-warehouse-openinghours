@@ -139,52 +139,6 @@
       "id": 6
     },
     {
-      "warehouse": "Kalbakken",
-      "from": "2021-09-01",
-      "to": "2021-10-01",
-      "priority": 2,
-      "openingHours": [
-        {
-          "weekday": "Monday",
-          "openingHour": "",
-          "closingHour": "",
-          "closed": true
-        },
-        {
-          "weekday": "Tuesday",
-          "openingHour": "",
-          "closingHour": "",
-          "closed": true
-        },
-        {
-          "weekday": "Wednsday",
-          "openingHour": "",
-          "closingHour": "",
-          "closed": true
-        },
-        {
-          "weekday": "Thursday",
-          "openingHour": "",
-          "closingHour": "",
-          "closed": true
-        },
-        {
-          "weekday": "Friday",
-          "openingHour": "",
-          "closingHour": "",
-          "closed": true
-        },
-        {
-          "weekday": "Saturday",
-          "openingHour": "",
-          "closingHour": "",
-          "closed": true
-        }
-      ],
-      "warehouseId": 0,
-      "id": 7
-    },
-    {
       "warehouse": "Bergen",
       "from": "2021-09-01",
       "to": "2021-10-01",
@@ -275,7 +229,7 @@
       ],
       "warehouseId": 6,
       "id": 9,
-      "title": "test"
+      "title": "test1"
     },
     {
       "warehouse": "Oslo",
@@ -368,8 +322,102 @@
         }
       ],
       "warehouseId": 0,
-      "title": "Sommer tid1",
+      "title": "Sommer tid",
       "id": 11
+    },
+    {
+      "warehouse": "Oslo",
+      "from": "2021-09-20",
+      "to": "2021-09-26",
+      "priority": 3,
+      "openingHours": [
+        {
+          "weekday": "Monday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Tuesday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Wednsday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Thursday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Friday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Saturday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        }
+      ],
+      "title": "Vinterferie",
+      "warehouseId": 3,
+      "id": 13
+    },
+    {
+      "warehouse": "Kalbakken",
+      "from": "2021-09-09",
+      "to": "2021-09-09",
+      "priority": 2,
+      "openingHours": [
+        {
+          "weekday": "Monday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Tuesday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Wednsday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Thursday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Friday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Saturday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        }
+      ],
+      "warehouseId": 0,
+      "title": "test",
+      "id": 14
     }
   ],
   "warehouse": [
