@@ -17,7 +17,7 @@ export const period = {
       closed: false,
     },
     {
-      weekday: 'Wednsday',
+      weekday: 'wednesday',
       openingHour: '',
       closingHour: '',
       closed: false,
@@ -40,16 +40,23 @@ export const period = {
       closingHour: '',
       closed: false,
     },
+    {
+      weekday: 'Sunday',
+      openingHour: '',
+      closingHour: '',
+      closed: false,
+    },
   ],
 };
 
 export const days = [
   { weekday: 'Monday' },
   { weekday: 'Tuesday' },
-  { weekday: 'Wednsday' },
+  { weekday: 'wednesday' },
   { weekday: 'Thursday' },
   { weekday: 'Friday' },
   { weekday: 'Saturday' },
+  { weekday: 'Sunday' },
 ];
 
 export const openingHours = [
@@ -66,7 +73,7 @@ export const openingHours = [
     closed: false,
   },
   {
-    weekday: 'Wednsday',
+    weekday: 'Wednesday',
     openingHour: '',
     closingHour: '',
     closed: false,
@@ -85,6 +92,12 @@ export const openingHours = [
   },
   {
     weekday: 'Saturday',
+    openingHour: '',
+    closingHour: '',
+    closed: false,
+  },
+  {
+    weekday: 'Sunday',
     openingHour: '',
     closingHour: '',
     closed: false,
