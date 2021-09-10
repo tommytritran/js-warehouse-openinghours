@@ -80,7 +80,7 @@ export default function PeriodAddModal({ togglePeriodAdd, warehouses, refreshPer
                   </div>
                 </div>
               </div>
-              <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+              <div className="bg-gray-50 px-4 py-2 sm:px-6 sm:flex sm:flex-row-reverse">
                 <button
                   type="button"
                   className="btn-accept"
