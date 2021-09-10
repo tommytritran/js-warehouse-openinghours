@@ -40,7 +40,7 @@ export default function PeriodEdit({ period, handler, initialFocusRef }) {
           focusRef={initialFocusRef}
         />
       </div>
-      <div className="py-4">
+      <div className="">
         <DateRangePicker
           from={period.from}
           to={period.to}
@@ -48,7 +48,7 @@ export default function PeriodEdit({ period, handler, initialFocusRef }) {
           toHandler={dateRangeToHandler}
         />
       </div>
-      <div className="flex items-center hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500  w-full border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 rounded-md">
+      <div className="flex items-center border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm rounded-md">
         <div>
           Priority:
         </div>
@@ -60,12 +60,7 @@ export default function PeriodEdit({ period, handler, initialFocusRef }) {
           />
         </div>
       </div>
-      <div className="sm:text-left py-4">
-        <div className="grid grid-cols-4 font-bold">
-          <div className="col-start-2">From</div>
-          <div>to</div>
-          <div>Closed</div>
-        </div>
+      <div className="sm:text-left">
         <div>
           <DayTimePicker
             data={period.openingHours}
