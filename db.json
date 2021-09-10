@@ -65,7 +65,7 @@
           "closed": true
         },
         {
-          "weekday": "Wednsday",
+          "weekday": "Wednesday",
           "openingHour": "",
           "closingHour": "",
           "closed": true
@@ -111,7 +111,7 @@
           "closed": true
         },
         {
-          "weekday": "Wednsday",
+          "weekday": "Wednesday",
           "openingHour": "",
           "closingHour": "",
           "closed": true
@@ -157,7 +157,7 @@
           "closed": true
         },
         {
-          "weekday": "Wednsday",
+          "weekday": "Wednesday",
           "openingHour": "",
           "closingHour": "",
           "closed": true
@@ -203,7 +203,7 @@
           "closed": true
         },
         {
-          "weekday": "Wednsday",
+          "weekday": "Wednesday",
           "openingHour": "",
           "closingHour": "",
           "closed": true
@@ -250,7 +250,7 @@
           "closed": true
         },
         {
-          "weekday": "Wednsday",
+          "weekday": "Wednesday",
           "openingHour": "",
           "closingHour": "",
           "closed": true
@@ -297,7 +297,7 @@
           "closed": false
         },
         {
-          "weekday": "Wednsday",
+          "weekday": "Wednesday",
           "openingHour": "",
           "closingHour": "",
           "closed": true
@@ -344,7 +344,7 @@
           "closed": true
         },
         {
-          "weekday": "Wednsday",
+          "weekday": "Wednesday",
           "openingHour": "",
           "closingHour": "",
           "closed": true
@@ -391,7 +391,7 @@
           "closed": true
         },
         {
-          "weekday": "Wednsday",
+          "weekday": "Wednesday",
           "openingHour": "",
           "closingHour": "",
           "closed": true
@@ -418,6 +418,53 @@
       "warehouseId": 0,
       "title": "test",
       "id": 14
+    },
+    {
+      "warehouse": "Lakkegata",
+      "from": "2021-09-13",
+      "to": "2021-09-19",
+      "priority": 2,
+      "openingHours": [
+        {
+          "weekday": "Monday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Tuesday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Wednesday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Thursday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Friday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Saturday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        }
+      ],
+      "title": "Sommertid",
+      "warehouseId": 1,
+      "id": 15
     }
   ],
   "warehouse": [
