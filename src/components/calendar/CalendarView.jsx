@@ -7,31 +7,24 @@ import useToggle from '../../Util/hooks/useToggle';
 
 export default function CalendarView({ events, periods, refreshHandler }) {
   const [toggleEditModal, setToggleEditModal] = useToggle();
-  const [period, setPeriod] = useState({});
-  const mounted = useRef();
-
-  useEffect(() => {
-    console.log(events);
-
-    if (!mounted.current) {
-      mounted.current = true;
-    } else {
-      setToggleEditModal();
-    }
-  }, [period]);
+  const [period, setPeriod] = useState();
 
   function handleEventClick(clickInfo) {
-    setPeriod(periods.filter((p) => p.id === parseInt(clickInfo.event.id, 10)));
+    setPeriod(periods.find((p) => p.id === parseInt(clickInfo.event.id, 10)));
+  }
+
+  function toggleModal() {
+    setPeriod(null);
   }
 
   return (
     <div className="h-screen">
-      {toggleEditModal
+      {period
       && (
       <PeriodEditModal
       // TODO figure out how to pass period
-        period={periods[0]}
-        toggleEdit={setToggleEditModal}
+        period={period}
+        toggleEdit={toggleModal}
         refreshPeriodList={refreshHandler}
       />
       )}
