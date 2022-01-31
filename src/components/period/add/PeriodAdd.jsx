@@ -15,29 +15,29 @@ export default function PeriodAdd({ warehouses, handler, initialFocusRef }) {
     handler(period);
   }, [period]);
 
-  function priorityHandler(id, priority) {
+  const priorityHandler = (id, priority) => {
     setPriorityPlaceholder(priority);
     setPeriod({ ...period, priority });
-  }
+  };
 
-  function warehouseHandler(warehouseId, warehouse) {
+  const warehouseHandler = (warehouseId, warehouse) => {
     setWarehousePlaceholder(warehouse);
     setPeriod({ ...period, warehouse, warehouseId });
-  }
+  };
 
-  function dateRangerFromHandler(date) {
+  const dateRangerFromHandler = (date) => {
     setPeriod({ ...period, from: date });
-  }
-  function dateRangeToHandler(date) {
+  };
+  const dateRangeToHandler = (date) => {
     setPeriod({ ...period, to: date });
-  }
+  };
 
-  function OpeningHourHandler(openingHours) {
+  const OpeningHourHandler = (openingHours) => {
     setPeriod({ ...period, openingHours });
-  }
-  function titelHandler(e) {
+  };
+  const titelHandler = (e) => {
     setPeriod({ ...period, title: e.target.value });
-  }
+  };
 
   return (
     <div className="text-color-default">

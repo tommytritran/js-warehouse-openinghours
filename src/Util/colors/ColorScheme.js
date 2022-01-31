@@ -8,13 +8,13 @@ export function getColorByPriority(priority) {
   let color = colorScheme.primary;
   switch (priority) {
     case 1:
-      color = colorScheme.primary;
+      color = colorScheme.tertiary;
       break;
     case 2:
       color = colorScheme.secondary;
       break;
     default:
-      color = colorScheme.tertiary;
+      color = colorScheme.primary;
       break;
   }
 

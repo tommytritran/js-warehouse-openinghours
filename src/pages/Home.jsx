@@ -21,16 +21,16 @@ export default function Home() {
     })();
   }, []);
 
-  function locationSelector(id, warehouse) {
+  const locationSelector = (id, warehouse) => {
     setSelectedWareHouse(id);
     setLocationPlaceholder(warehouse);
-  }
+  };
 
-  function refreshPeriodList() {
+  const refreshPeriodList = () => {
     (async () => {
       setPeriods(await getAllPeriods());
     })();
-  }
+  };
   return (
     <div>
       <div className="flex xs:justify-between md:justify-start">

@@ -22,9 +22,9 @@ export default function PeriodAddModal({ togglePeriodAdd, warehouses, refreshPer
     }
   }
 
-  function periodAddHandler(data) {
+  const periodAddHandler = (data) => {
     setPeriod(data);
-  }
+  };
   return (
     <Transition.Root show as={Fragment}>
       <Dialog

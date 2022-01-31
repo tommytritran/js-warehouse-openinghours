@@ -9,6 +9,12 @@ import OpeningHours from './OpeningHours';
 export default function PeriodListItem({ period, refreshPeriodList }) {
   const [showPeriod, setShowPeriod] = useState(false);
   const [toggleEdit, setToggleEdit] = useToggle(false);
+  let periodDate = '';
+  if (period.from !== '' && period.to !== '') {
+    periodDate = `${format(new Date(period.from), 'yyyy.MM.dd')} - ${format(new Date(period.to), 'yyyy.MM.dd')}`;
+  } else {
+    periodDate = 'ikke oppgitt';
+  }
 
   function togglePeriod() {
     setShowPeriod(!showPeriod);
@@ -16,19 +22,17 @@ export default function PeriodListItem({ period, refreshPeriodList }) {
   function getPriorityColor(priority) {
     switch (priority) {
       case 0:
-        return 'bg-green-100 text-green-800';
+        return 'bg-red-200 text-red-900';
       case 1:
-        return 'bg-green-100 text-green-800';
-      case 2:
-        return 'bg-yellow-100 text-yellow-800';
-      case 3:
-      default:
         return 'bg-red-100 text-red-800';
+      case 2:
+        return 'bg-yellow-200 text-yellow-900';
+      case 3:
+        return 'bg-yellow-100 text-yellow-800';
+      default:
+        return 'bg-green-100 text-green-800';
     }
   }
-  console.log(period);
-
-  const PeriodDate = `${format(new Date(period.from), 'yyyy.MM.dd')} - ${format(new Date(period.to), 'yyyy.MM.dd')}`;
   return (
     <>
       {toggleEdit && (
@@ -43,7 +47,7 @@ export default function PeriodListItem({ period, refreshPeriodList }) {
         <td className="px-6 py-4  text-sm text-color-default w-44">{period.title}</td>
         <td className="px-6 py-4 whitespace-nowrap text-sm">
           <button type="button" className={`flex space-x-2 ${showPeriod && 'font-bold pb-2'}`} onClick={() => togglePeriod()}>
-            <div>{PeriodDate}</div>
+            <div>{periodDate}</div>
             <div>{showPeriod ? <ChevronUpIcon className="w-4 h-4 mt-0.5" /> : <ChevronDownIcon className="w-4 h-4 mt-0.5" />}</div>
           </button>
           <div className="flex flex-col">

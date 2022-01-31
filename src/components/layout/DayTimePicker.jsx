@@ -5,34 +5,34 @@ import { openingHours as openingHoursModel } from '../../model/Period';
 export default function DayTimePicker({ data, handler }) {
   const openingHours = useRef(openingHoursModel);
   const openingHourData = data || openingHoursModel;
-  function closingHourHandler(weekday, closingHour) {
+  const closingHourHandler = (weekday, closingHour) => {
     openingHours.current = openingHours.current.map(
       (oh) => (oh.weekday === weekday ? { ...oh, closingHour } : oh),
     );
     handler(openingHours.current);
-  }
-  function openingHourHandler(weekday, openingHour) {
+  };
+  const openingHourHandler = (weekday, openingHour) => {
     openingHours.current = openingHours.current.map(
       (oh) => (oh.weekday === weekday ? { ...oh, openingHour } : oh),
     );
     handler(openingHours.current);
-  }
-  function closedHandler(weekday, closed) {
+  };
+  const closedHandler = (weekday, closed) => {
     openingHours.current = openingHours.current.map(
       (oh) => (
         oh.weekday === weekday ? { ...oh, closed } : oh
       ),
     );
     handler(openingHours.current);
-  }
+  };
 
-  function getOpeningHourByDay(day) {
+  const getOpeningHourByDay = (day) => {
     const result = openingHourData.find((openingHour) => openingHour.weekday === day);
     if (result) {
       return result;
     }
     return openingHoursModel.find((openingHour) => openingHour.weekday === day);
-  }
+  };
 
   return (
     <div className="border rounded-md my-4 px-4 py-2">

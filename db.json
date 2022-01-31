@@ -93,52 +93,6 @@
       "id": 5
     },
     {
-      "warehouse": "Kalbakken",
-      "from": "2021-09-01",
-      "to": "2022-09-01",
-      "priority": 1,
-      "openingHours": [
-        {
-          "weekday": "Monday",
-          "openingHour": "",
-          "closingHour": "",
-          "closed": true
-        },
-        {
-          "weekday": "Tuesday",
-          "openingHour": "",
-          "closingHour": "",
-          "closed": true
-        },
-        {
-          "weekday": "Wednesday",
-          "openingHour": "",
-          "closingHour": "",
-          "closed": true
-        },
-        {
-          "weekday": "Thursday",
-          "openingHour": "",
-          "closingHour": "",
-          "closed": true
-        },
-        {
-          "weekday": "Friday",
-          "openingHour": "",
-          "closingHour": "",
-          "closed": true
-        },
-        {
-          "weekday": "Saturday",
-          "openingHour": "",
-          "closingHour": "",
-          "closed": true
-        }
-      ],
-      "warehouseId": 0,
-      "id": 6
-    },
-    {
       "warehouse": "Bergen",
       "from": "2021-09-01",
       "to": "2021-10-01",
@@ -382,37 +336,43 @@
           "weekday": "Monday",
           "openingHour": "",
           "closingHour": "",
-          "closed": true
+          "closed": false
         },
         {
           "weekday": "Tuesday",
           "openingHour": "",
           "closingHour": "",
-          "closed": true
+          "closed": false
         },
         {
           "weekday": "Wednesday",
           "openingHour": "",
           "closingHour": "",
-          "closed": true
+          "closed": false
         },
         {
           "weekday": "Thursday",
-          "openingHour": "",
-          "closingHour": "",
-          "closed": true
+          "openingHour": "16:44",
+          "closingHour": "18:46",
+          "closed": false
         },
         {
           "weekday": "Friday",
           "openingHour": "",
           "closingHour": "",
-          "closed": true
+          "closed": false
         },
         {
           "weekday": "Saturday",
           "openingHour": "",
           "closingHour": "",
-          "closed": true
+          "closed": false
+        },
+        {
+          "weekday": "Sunday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": false
         }
       ],
       "warehouseId": 0,
@@ -465,6 +425,112 @@
       "title": "Sommertid",
       "warehouseId": 1,
       "id": 15
+    },
+    {
+      "warehouse": "Ålesund",
+      "from": "2021-10-18",
+      "to": "2021-10-24",
+      "priority": 1,
+      "openingHours": [
+        {
+          "weekday": "Monday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Tuesday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Wednesday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Thursday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Friday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Saturday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        },
+        {
+          "weekday": "Sunday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": true
+        }
+      ],
+      "title": "Sommertid",
+      "warehouseId": 7,
+      "id": 16
+    },
+    {
+      "warehouse": "Ålesund",
+      "from": "",
+      "to": "",
+      "priority": 10,
+      "openingHours": [
+        {
+          "weekday": "Monday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": false
+        },
+        {
+          "weekday": "Tuesday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": false
+        },
+        {
+          "weekday": "Wednesday",
+          "openingHour": "08:00",
+          "closingHour": "",
+          "closed": false
+        },
+        {
+          "weekday": "Thursday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": false
+        },
+        {
+          "weekday": "Friday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": false
+        },
+        {
+          "weekday": "Saturday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": false
+        },
+        {
+          "weekday": "Sunday",
+          "openingHour": "",
+          "closingHour": "",
+          "closed": false
+        }
+      ],
+      "title": "Vanlig åpningstid",
+      "warehouseId": 7,
+      "id": 17
     }
   ],
   "warehouse": [

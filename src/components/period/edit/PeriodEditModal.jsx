@@ -11,7 +11,7 @@ export default function PeriodEditModal({
   const initialFocusRef = useRef(null);
   const [editedPeriod, setEditedPeriod] = useState({});
 
-  function saveEdit() {
+  const saveEdit = () => {
     const errors = validatePeriod(period);
     if (errors.length > 0) {
       console.log(errors);
@@ -21,15 +21,15 @@ export default function PeriodEditModal({
       updatePeriod(editedPeriod);
       refreshPeriodList();
     }
-  }
-  function editPeriodHandler(data) {
+  };
+  const editPeriodHandler = (data) => {
     setEditedPeriod(data);
-  }
-  function deletePeriodHandler() {
+  };
+  const deletePeriodHandler = () => {
     deletePeriod(period.id);
     toggleEdit(false);
     refreshPeriodList();
-  }
+  };
   return (
     <Transition.Root show as={Fragment}>
       <Dialog

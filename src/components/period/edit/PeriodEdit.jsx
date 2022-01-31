@@ -12,24 +12,24 @@ export default function PeriodEdit({ period, handler, initialFocusRef }) {
     handler(editedPeriod);
   }, [editedPeriod]);
 
-  function priorityHandler(id, priority) {
+  const priorityHandler = (id, priority) => {
     setPriorityPlaceholder(priority);
     setEditedPeriod({ ...period, priority });
-  }
+  };
 
-  function dateRangerFromHandler(date) {
+  const dateRangerFromHandler = (date) => {
     setEditedPeriod({ ...period, from: date });
-  }
-  function dateRangeToHandler(date) {
+  };
+  const dateRangeToHandler = (date) => {
     setEditedPeriod({ ...period, to: date });
-  }
+  };
 
-  function titleHandler(e) {
+  const titleHandler = (e) => {
     setEditedPeriod({ ...period, title: e.target.value });
-  }
-  function OpeningHourHandler(openingHours) {
+  };
+  const OpeningHourHandler = (openingHours) => {
     setEditedPeriod({ ...period, openingHours });
-  }
+  };
   return (
     <div className="text-color-default">
       <div className="">

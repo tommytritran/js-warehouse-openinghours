@@ -2,8 +2,6 @@ import React from 'react';
 import { openingHours } from '../../../model/Period';
 
 export default function OpeningHours({ openingHourData }) {
-  console.log(openingHourData);
-
   const data = openingHourData || openingHours;
   function getWeekdayData(day) {
     const result = data.find((d) => d.weekday === day);
